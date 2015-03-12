@@ -14,6 +14,7 @@
 @property (nonatomic,strong) UITableView *tableView;
 
 @property (nonatomic,strong) GFWProgressView *progressView;
+@property (nonatomic,strong) UILabel *firstFlowTitle;
 
 @end
 
@@ -53,7 +54,8 @@
     self.tableView.delegate = self;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.showsVerticalScrollIndicator = NO;
-    [self.view addSubview:self.tableView];}
+    [self.view addSubview:self.tableView];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -107,7 +109,7 @@
     if (section == 0) {
         return 1;
     } else if (section == 1) {
-        return 2;
+        return 1;
     } else if (section == 2) {
         return 2;
     } else {
@@ -119,7 +121,7 @@
     if (indexPath.section == 0 && indexPath.row == 0) {
         return 100;
     } else if (indexPath.section == 1 && indexPath.row == 0) {
-        return 100;
+        return 105;
     } else if (indexPath.section == 2) {
         return 45;
     } else {
@@ -149,7 +151,7 @@
     } else if (indexPath.section == 2 && indexPath.row == 0) {
         
         UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-        cell.selectionStyle = UITableViewCellSelectionStyleGray;
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.backgroundColor = [UIColor whiteColor];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         
@@ -183,6 +185,13 @@
         tipsImageView.image = [UIImage imageNamed:@"how-tips-icon"];
         [cell.contentView addSubview:tipsImageView];
         
+        UILabel *detailLabel = [[UILabel alloc] initWithFrame:CGRectMake(33, 0, kScreenWidth - 50, 45)];
+        detailLabel.backgroundColor = [UIColor clearColor];
+        detailLabel.font = [UIFont systemFontOfSize:15];
+        detailLabel.textColor = [UIColor colorWithRed:161.0/255.0 green:174.0/255.0 blue:173.0/255.0 alpha:1.0];
+        detailLabel.text = @"合理使用「科学上网」,畅游无尽的知识海洋。";
+        [cell.contentView addSubview:detailLabel];
+        
         return cell;
     } else if (indexPath.section == 3 && indexPath.row == 0) {
         
@@ -190,6 +199,23 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         cell.backgroundColor = [UIColor whiteColor];
+        
+        UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(12, 0, 100, 45)];
+        titleLabel.backgroundColor = [UIColor clearColor];
+        titleLabel.font = [UIFont systemFontOfSize:15];
+        titleLabel.textColor = [UIColor themeColor];
+        titleLabel.text = @"免费赚取流量";
+        [cell.contentView addSubview:titleLabel];
+        
+        if (!self.firstFlowTitle) {
+            self.firstFlowTitle = [[UILabel alloc] initWithFrame:CGRectMake(kScreenWidth - 230, 0, 200, 45)];
+            self.firstFlowTitle.backgroundColor = [UIColor clearColor];
+            self.firstFlowTitle.font = [UIFont systemFontOfSize:12];
+            self.firstFlowTitle.textAlignment = NSTextAlignmentRight;
+            self.firstFlowTitle.textColor = [UIColor colorWithRed:161.0/255.0 green:174.0/255.0 blue:173.0/255.0 alpha:1.0];
+            self.firstFlowTitle.text = @"嘻嘻嘻嘻嘻嘻";
+        }
+        [cell.contentView addSubview:self.firstFlowTitle];
         
         UIView *speLineView = [[UIView alloc] initWithFrame:CGRectMake(12, 44.5, kScreenWidth - 12, 0.5)];
         speLineView.backgroundColor = [UIColor colorWithRed:201.0/255.0 green:201.0/255.0 blue:201.0/255.0 alpha:201.0/255.0];
@@ -202,6 +228,22 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         cell.backgroundColor = [UIColor whiteColor];
+        
+        UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(12, 0, 100, 45)];
+        titleLabel.backgroundColor = [UIColor clearColor];
+        titleLabel.font = [UIFont systemFontOfSize:15];
+        titleLabel.textColor = [UIColor themeColor];
+        titleLabel.text = @"成为付费会员";
+        [cell.contentView addSubview:titleLabel];
+        
+        UILabel *detailLabel = [[UILabel alloc] initWithFrame:CGRectMake(kScreenWidth - 130, 0, 100, 45)];
+        detailLabel.backgroundColor = [UIColor clearColor];
+        detailLabel.font = [UIFont systemFontOfSize:12];
+        detailLabel.textAlignment = NSTextAlignmentRight;
+        detailLabel.textColor = [UIColor colorWithRed:161.0/255.0 green:174.0/255.0 blue:173.0/255.0 alpha:1.0];
+        detailLabel.text = @"无限流量";
+        [cell.contentView addSubview:detailLabel];
+        
         return cell;
     } else {
         return nil;
