@@ -22,6 +22,15 @@
 		3382E4121AAD76F000C91B88 /* UIColor+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3382E4111AAD76F000C91B88 /* UIColor+Factory.m */; };
 		3382E4191AAE979200C91B88 /* GFWProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3382E4181AAE979200C91B88 /* GFWProgressView.m */; };
 		33E0E0711AB68225001C56B6 /* libYouMi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E0E0701AB68225001C56B6 /* libYouMi.a */; };
+		33E0E08A1AB6B771001C56B6 /* BeeCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E0E0831AB6B771001C56B6 /* BeeCache.m */; };
+		33E0E08B1AB6B771001C56B6 /* BeeSandbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E0E0851AB6B771001C56B6 /* BeeSandbox.m */; };
+		33E0E08C1AB6B771001C56B6 /* BeeSystemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E0E0871AB6B771001C56B6 /* BeeSystemInfo.m */; };
+		33E0E08D1AB6B771001C56B6 /* NSDictionary+BeeExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E0E0891AB6B771001C56B6 /* NSDictionary+BeeExtension.m */; };
+		33E0E0971AB6BA0C001C56B6 /* ConnectionUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E0E0901AB6BA0C001C56B6 /* ConnectionUtils.m */; };
+		33E0E0981AB6BA0C001C56B6 /* KZRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E0E0921AB6BA0C001C56B6 /* KZRequest.m */; };
+		33E0E0991AB6BA0C001C56B6 /* KZRequestData.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E0E0941AB6BA0C001C56B6 /* KZRequestData.m */; };
+		33E0E09A1AB6BA0C001C56B6 /* KZResponseData.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E0E0961AB6BA0C001C56B6 /* KZResponseData.m */; };
+		33E0E09E1AB6BF8F001C56B6 /* ShareData.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E0E09D1AB6BF8F001C56B6 /* ShareData.m */; };
 		59D60AFE6E5104123C39395C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6CBA7BCBDEA9F01783223F9 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +85,24 @@
 		33E0E06E1AB68225001C56B6 /* YouMiWallSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiWallSpot.h; sourceTree = "<group>"; };
 		33E0E06F1AB68225001C56B6 /* YouMiWallSpotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiWallSpotView.h; sourceTree = "<group>"; };
 		33E0E0701AB68225001C56B6 /* libYouMi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libYouMi.a; sourceTree = "<group>"; };
+		33E0E0821AB6B771001C56B6 /* BeeCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeeCache.h; sourceTree = "<group>"; };
+		33E0E0831AB6B771001C56B6 /* BeeCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeeCache.m; sourceTree = "<group>"; };
+		33E0E0841AB6B771001C56B6 /* BeeSandbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeeSandbox.h; sourceTree = "<group>"; };
+		33E0E0851AB6B771001C56B6 /* BeeSandbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeeSandbox.m; sourceTree = "<group>"; };
+		33E0E0861AB6B771001C56B6 /* BeeSystemInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeeSystemInfo.h; sourceTree = "<group>"; };
+		33E0E0871AB6B771001C56B6 /* BeeSystemInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeeSystemInfo.m; sourceTree = "<group>"; };
+		33E0E0881AB6B771001C56B6 /* NSDictionary+BeeExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+BeeExtension.h"; sourceTree = "<group>"; };
+		33E0E0891AB6B771001C56B6 /* NSDictionary+BeeExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+BeeExtension.m"; sourceTree = "<group>"; };
+		33E0E08F1AB6BA0C001C56B6 /* ConnectionUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionUtils.h; sourceTree = "<group>"; };
+		33E0E0901AB6BA0C001C56B6 /* ConnectionUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionUtils.m; sourceTree = "<group>"; };
+		33E0E0911AB6BA0C001C56B6 /* KZRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZRequest.h; sourceTree = "<group>"; };
+		33E0E0921AB6BA0C001C56B6 /* KZRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KZRequest.m; sourceTree = "<group>"; };
+		33E0E0931AB6BA0C001C56B6 /* KZRequestData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZRequestData.h; sourceTree = "<group>"; };
+		33E0E0941AB6BA0C001C56B6 /* KZRequestData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KZRequestData.m; sourceTree = "<group>"; };
+		33E0E0951AB6BA0C001C56B6 /* KZResponseData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZResponseData.h; sourceTree = "<group>"; };
+		33E0E0961AB6BA0C001C56B6 /* KZResponseData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KZResponseData.m; sourceTree = "<group>"; };
+		33E0E09C1AB6BF8F001C56B6 /* ShareData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareData.h; sourceTree = "<group>"; };
+		33E0E09D1AB6BF8F001C56B6 /* ShareData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareData.m; sourceTree = "<group>"; };
 		ACF9376D9E2C7ED920BEAFC1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D6CBA7BCBDEA9F01783223F9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E90DC9A46C43379DAC027A4E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -124,6 +151,8 @@
 		3382E3CC1AAD476E00C91B88 /* OverGFW */ = {
 			isa = PBXGroup;
 			children = (
+				33E0E09B1AB6BA37001C56B6 /* Data */,
+				33E0E0721AB6B501001C56B6 /* NetWork */,
 				33E0E0631AB68217001C56B6 /* Vendor */,
 				3382E4141AAE973E00C91B88 /* View */,
 				3382E40F1AAD76E200C91B88 /* Category */,
@@ -275,6 +304,62 @@
 				33E0E06F1AB68225001C56B6 /* YouMiWallSpotView.h */,
 			);
 			path = include;
+			sourceTree = "<group>";
+		};
+		33E0E0721AB6B501001C56B6 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				33E0E0741AB6B6EF001C56B6 /* Request */,
+			);
+			name = NetWork;
+			sourceTree = "<group>";
+		};
+		33E0E0741AB6B6EF001C56B6 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				33E0E08E1AB6B9F7001C56B6 /* BasicRequest */,
+				33E0E0811AB6B771001C56B6 /* BeeFramework */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		33E0E0811AB6B771001C56B6 /* BeeFramework */ = {
+			isa = PBXGroup;
+			children = (
+				33E0E0821AB6B771001C56B6 /* BeeCache.h */,
+				33E0E0831AB6B771001C56B6 /* BeeCache.m */,
+				33E0E0841AB6B771001C56B6 /* BeeSandbox.h */,
+				33E0E0851AB6B771001C56B6 /* BeeSandbox.m */,
+				33E0E0861AB6B771001C56B6 /* BeeSystemInfo.h */,
+				33E0E0871AB6B771001C56B6 /* BeeSystemInfo.m */,
+				33E0E0881AB6B771001C56B6 /* NSDictionary+BeeExtension.h */,
+				33E0E0891AB6B771001C56B6 /* NSDictionary+BeeExtension.m */,
+			);
+			path = BeeFramework;
+			sourceTree = "<group>";
+		};
+		33E0E08E1AB6B9F7001C56B6 /* BasicRequest */ = {
+			isa = PBXGroup;
+			children = (
+				33E0E08F1AB6BA0C001C56B6 /* ConnectionUtils.h */,
+				33E0E0901AB6BA0C001C56B6 /* ConnectionUtils.m */,
+				33E0E0911AB6BA0C001C56B6 /* KZRequest.h */,
+				33E0E0921AB6BA0C001C56B6 /* KZRequest.m */,
+				33E0E0931AB6BA0C001C56B6 /* KZRequestData.h */,
+				33E0E0941AB6BA0C001C56B6 /* KZRequestData.m */,
+				33E0E0951AB6BA0C001C56B6 /* KZResponseData.h */,
+				33E0E0961AB6BA0C001C56B6 /* KZResponseData.m */,
+			);
+			path = BasicRequest;
+			sourceTree = "<group>";
+		};
+		33E0E09B1AB6BA37001C56B6 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				33E0E09C1AB6BF8F001C56B6 /* ShareData.h */,
+				33E0E09D1AB6BF8F001C56B6 /* ShareData.m */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		5EA41D6217725730504160B4 /* Pods */ = {
@@ -429,12 +514,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33E0E08C1AB6B771001C56B6 /* BeeSystemInfo.m in Sources */,
+				33E0E09E1AB6BF8F001C56B6 /* ShareData.m in Sources */,
+				33E0E08B1AB6B771001C56B6 /* BeeSandbox.m in Sources */,
+				33E0E0971AB6BA0C001C56B6 /* ConnectionUtils.m in Sources */,
+				33E0E08A1AB6B771001C56B6 /* BeeCache.m in Sources */,
+				33E0E0981AB6BA0C001C56B6 /* KZRequest.m in Sources */,
 				3382E4191AAE979200C91B88 /* GFWProgressView.m in Sources */,
 				3382E40D1AAD71A800C91B88 /* MainThemeUtil.m in Sources */,
+				33E0E09A1AB6BA0C001C56B6 /* KZResponseData.m in Sources */,
 				3382E3FB1AAD4FAD00C91B88 /* SecondViewController.m in Sources */,
+				33E0E08D1AB6B771001C56B6 /* NSDictionary+BeeExtension.m in Sources */,
 				3382E3FE1AAD4FB900C91B88 /* ThirdViewController.m in Sources */,
 				3382E3D31AAD476E00C91B88 /* AppDelegate.m in Sources */,
 				3382E4081AAD6EA600C91B88 /* GFWViewController.m in Sources */,
+				33E0E0991AB6BA0C001C56B6 /* KZRequestData.m in Sources */,
 				3382E4121AAD76F000C91B88 /* UIColor+Factory.m in Sources */,
 				3382E3F81AAD4FA100C91B88 /* FirstViewController.m in Sources */,
 				3382E3D01AAD476E00C91B88 /* main.m in Sources */,
