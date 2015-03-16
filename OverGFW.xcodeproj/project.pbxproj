@@ -21,6 +21,7 @@
 		3382E40D1AAD71A800C91B88 /* MainThemeUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 3382E40C1AAD71A800C91B88 /* MainThemeUtil.m */; };
 		3382E4121AAD76F000C91B88 /* UIColor+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3382E4111AAD76F000C91B88 /* UIColor+Factory.m */; };
 		3382E4191AAE979200C91B88 /* GFWProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3382E4181AAE979200C91B88 /* GFWProgressView.m */; };
+		33E0E0711AB68225001C56B6 /* libYouMi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E0E0701AB68225001C56B6 /* libYouMi.a */; };
 		59D60AFE6E5104123C39395C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6CBA7BCBDEA9F01783223F9 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,17 @@
 		3382E4131AADB0E700C91B88 /* Consts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Consts.h; sourceTree = "<group>"; };
 		3382E4171AAE979200C91B88 /* GFWProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFWProgressView.h; sourceTree = "<group>"; };
 		3382E4181AAE979200C91B88 /* GFWProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFWProgressView.m; sourceTree = "<group>"; };
+		33E0E0661AB68225001C56B6 /* YouMiConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiConfig.h; sourceTree = "<group>"; };
+		33E0E0671AB68225001C56B6 /* YouMiDelegateProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiDelegateProtocol.h; sourceTree = "<group>"; };
+		33E0E0681AB68225001C56B6 /* YouMiPointsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiPointsManager.h; sourceTree = "<group>"; };
+		33E0E0691AB68225001C56B6 /* YouMiSpots.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiSpots.h; sourceTree = "<group>"; };
+		33E0E06A1AB68225001C56B6 /* YouMiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiView.h; sourceTree = "<group>"; };
+		33E0E06B1AB68225001C56B6 /* YouMiWall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiWall.h; sourceTree = "<group>"; };
+		33E0E06C1AB68225001C56B6 /* YouMiWallAppModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiWallAppModel.h; sourceTree = "<group>"; };
+		33E0E06D1AB68225001C56B6 /* YouMiWallBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiWallBanner.h; sourceTree = "<group>"; };
+		33E0E06E1AB68225001C56B6 /* YouMiWallSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiWallSpot.h; sourceTree = "<group>"; };
+		33E0E06F1AB68225001C56B6 /* YouMiWallSpotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiWallSpotView.h; sourceTree = "<group>"; };
+		33E0E0701AB68225001C56B6 /* libYouMi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libYouMi.a; sourceTree = "<group>"; };
 		ACF9376D9E2C7ED920BEAFC1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D6CBA7BCBDEA9F01783223F9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E90DC9A46C43379DAC027A4E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -75,6 +87,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				59D60AFE6E5104123C39395C /* libPods.a in Frameworks */,
+				33E0E0711AB68225001C56B6 /* libYouMi.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +124,7 @@
 		3382E3CC1AAD476E00C91B88 /* OverGFW */ = {
 			isa = PBXGroup;
 			children = (
+				33E0E0631AB68217001C56B6 /* Vendor */,
 				3382E4141AAE973E00C91B88 /* View */,
 				3382E40F1AAD76E200C91B88 /* Category */,
 				3382E40A1AAD70C500C91B88 /* Util */,
@@ -227,6 +241,40 @@
 				3382E4181AAE979200C91B88 /* GFWProgressView.m */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		33E0E0631AB68217001C56B6 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				33E0E0641AB68225001C56B6 /* Youmi */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		33E0E0641AB68225001C56B6 /* Youmi */ = {
+			isa = PBXGroup;
+			children = (
+				33E0E0651AB68225001C56B6 /* include */,
+				33E0E0701AB68225001C56B6 /* libYouMi.a */,
+			);
+			path = Youmi;
+			sourceTree = "<group>";
+		};
+		33E0E0651AB68225001C56B6 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				33E0E0661AB68225001C56B6 /* YouMiConfig.h */,
+				33E0E0671AB68225001C56B6 /* YouMiDelegateProtocol.h */,
+				33E0E0681AB68225001C56B6 /* YouMiPointsManager.h */,
+				33E0E0691AB68225001C56B6 /* YouMiSpots.h */,
+				33E0E06A1AB68225001C56B6 /* YouMiView.h */,
+				33E0E06B1AB68225001C56B6 /* YouMiWall.h */,
+				33E0E06C1AB68225001C56B6 /* YouMiWallAppModel.h */,
+				33E0E06D1AB68225001C56B6 /* YouMiWallBanner.h */,
+				33E0E06E1AB68225001C56B6 /* YouMiWallSpot.h */,
+				33E0E06F1AB68225001C56B6 /* YouMiWallSpotView.h */,
+			);
+			path = include;
 			sourceTree = "<group>";
 		};
 		5EA41D6217725730504160B4 /* Pods */ = {
@@ -517,6 +565,10 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/OverGFW/PrefixHeader.pch";
 				INFOPLIST_FILE = OverGFW/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OverGFW/Youmi",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -530,6 +582,10 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/OverGFW/PrefixHeader.pch";
 				INFOPLIST_FILE = OverGFW/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OverGFW/Youmi",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
