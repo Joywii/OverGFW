@@ -10,6 +10,8 @@
 
 @interface ShareData : NSObject
 
-- (ShareData *)shareData;
+@property (nonatomic,strong) NSMutableArray *shareAPPS;
+
++ (ShareData *)shareData;
 
 @end

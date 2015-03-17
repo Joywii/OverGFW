@@ -10,13 +10,12 @@
 
 @interface ShareData ()
 
-@property (nonatomic,strong) NSMutableArray *shareAPPS;
 
 @end
 
 @implementation ShareData
 
-- (ShareData *)shareData
++ (ShareData *)shareData
 {
     static ShareData *shareData;
     static dispatch_once_t token;

@@ -8,6 +8,10 @@
 
 #import "AppDelegate.h"
 #import "MainThemeUtil.h"
+#import "YouMiConfig.h"
+#import "YouMiWall.h"
+#import "ShareData.h"
+
 
 @interface AppDelegate ()
 
@@ -22,9 +26,31 @@
     //设置Nav和Tab的颜色主题
     [MainThemeUtil themeAppearence];
     
+    
+    //Youmi
+    //[YouMiConfig setUserID:@""];       // [可选]
+    //[YouMiConfig setUseInAppStore:YES];  // [可选]
+    [YouMiConfig launchWithAppID:kYouMiDestribureID appSecret:kYouMiSecret];
+    
+    [self getApps];
     return YES;
 }
 
+- (void)getApps
+{
+    [YouMiWall requestOffersOpenData:YES page:1 count:10 revievedBlock:^(NSArray *theApps, NSError *error) {
+        if (!error) {
+            
+            for (YouMiWallAppModel *model in theApps) {
+                NSLog(@"%ld", model.points);
+            }
+            [[ShareData shareData].shareAPPS removeAllObjects];
+            [[ShareData shareData].shareAPPS addObjectsFromArray:theApps];
+        } else {
+            NSLog(@"%@",error);
+        }
+    }];
+}
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

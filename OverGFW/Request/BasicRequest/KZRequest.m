@@ -75,7 +75,6 @@
 {
     
     NSMutableDictionary *httpHeaderFields = [NSMutableDictionary dictionary] ;
-    [httpHeaderFields setObject:[ConnectionUtils userAgentString] forKey:@"User-Agent"] ;
     
     return [self initPostWithURL:url
                             args:args

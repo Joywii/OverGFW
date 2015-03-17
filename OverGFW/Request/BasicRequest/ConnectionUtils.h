@@ -7,12 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "UIDevice+Hardware.h"
-//#import "Reachability.h"
 
 @interface ConnectionUtils : NSObject
-
-+ (NSString *)userAgentString ;
 
 /* 通过prams字典拼接url */
 + (NSString *)serializeURL:(NSString *)baseURL params:(NSDictionary *)params httpMethod:(NSString *)httpMethod;
@@ -28,10 +24,5 @@
 
 /* 替换"?" */
 + (NSString *)stringWithUrl:(NSString *)originUrl andArgs:(NSArray *)args ;
-
-//+(BOOL)isReachable ;
-//
-////返回网络连接状态
-//+(NetworkStatus)currentReachabilityStatus ;
 
 @end

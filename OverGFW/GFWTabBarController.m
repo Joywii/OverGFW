@@ -7,6 +7,7 @@
 //
 
 #import "GFWTabBarController.h"
+#import "YouMiWall.h"
 
 @interface GFWTabBarController ()
 
@@ -45,12 +46,30 @@
     UIImage *profilePressedImage = [[UIImage imageNamed:@"tabbaritem3_pressed"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     profileTabBarItem.image = profileNormalImage;
     profileTabBarItem.selectedImage = profilePressedImage;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pointsGotted:) name:kYouMiPointsManagerRecivedPointsNotification object:nil];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kYouMiPointsManagerRecivedPointsNotification object:nil];
 }
 
-
+// 获得积分
+- (void)pointsGotted:(NSNotification *)notification {
+    NSDictionary *dict = [notification userInfo];
+    NSNumber *freshPoints = [dict objectForKey:kYouMiPointsManagerFreshPointsKey];
+    NSLog(@"积分信息：%@ %@", dict,freshPoints);
+    
+    // 手动积分管理可以通过下面这种方法获得每份积分的信息。
+    NSArray *pointInfos = dict[kYouMiPointsManagerPointInfosKey];
+    for (NSDictionary *aPointInfo in pointInfos) {
+        // aPointInfo 是每份积分的信息，包括积分数，userID，下载的APP的名字
+        NSLog(@"积分数：%@", aPointInfo[kYouMiPointsManagerPointAmountKey]);
+        NSLog(@"userID：%@", aPointInfo[kYouMiPointsManagerPointUserIDKey]);
+        NSLog(@"产品名字：%@", aPointInfo[kYouMiPointsManagerPointProductNameKey]);
+        
+        // TODO 按需要处理
+    }
+}
 @end

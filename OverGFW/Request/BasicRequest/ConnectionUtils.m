@@ -10,19 +10,6 @@
 
 @implementation ConnectionUtils
 
-+ (NSString *)userAgentString
-{
-    //@"KuaiZhan/1.0(Linux;Android4.04;zh-cn;SAMSUNG-GT-S7568_TD)"
-    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
-    NSString *kuaizhan = @"KuaiZhan" ;
-    NSString *version = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
-    NSString *hardwareDescription = [[UIDevice currentDevice] hardwareDescription] ;
-    float hardwareVersion = DEVICE_IOS_VERSION  ;
-    NSString *language = @"zh-cn" ;
-    NSString *deviceType = @"appStore";
-    return [NSString stringWithFormat:@"%@/%@(%@;iOS%f;%@;%@)",kuaizhan,version,hardwareDescription,hardwareVersion,language,deviceType] ;
-}
-
 + (NSString *)serializeURL:(NSString *)baseURL params:(NSDictionary *)params httpMethod:(NSString *)httpMethod
 {
     if (![httpMethod isEqualToString:@"GET"])
@@ -98,18 +85,4 @@
     }
     return mString;
 }
-
-//+(BOOL)isReachable
-//{
-//    return [[Reachability reachabilityForInternetConnection] isReachable];
-//}
-
-////返回网络连接状态
-//+(NetworkStatus)currentReachabilityStatus
-//{
-//    return [[Reachability reachabilityForInternetConnection] currentReachabilityStatus] ;
-//}
-
-
-
 @end

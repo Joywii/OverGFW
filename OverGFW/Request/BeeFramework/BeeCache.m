@@ -36,8 +36,7 @@
 	if ( self )
 	{
 		self.cacheUser = @"";
-//        self.cachePath = [NSString stringWithFormat:@"%@/%@/cache/", [BeeSandbox libCachePath], [BeeSystemInfo appVersion]];
-		self.cachePath = [NSString stringWithFormat:@"%@/%@/", [BeeSandbox libCachePath],kAppName];
+		self.cachePath = [NSString stringWithFormat:@"%@/%@/", [BeeSandbox libCachePath],@"overgfw"];
 	}
 	return self;
 }
