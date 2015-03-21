@@ -11,9 +11,13 @@
 #import "YouMiConfig.h"
 #import "YouMiWall.h"
 #import "ShareData.h"
+#import "UserinfoManager.h"
+#import "GuideViewController.h"
 
 
 @interface AppDelegate ()
+
+@property (strong, nonatomic) UITabBarController *tabBarViewController;
 
 @end
 
@@ -33,6 +37,13 @@
     [YouMiConfig launchWithAppID:kYouMiDestribureID appSecret:kYouMiSecret];
     
     [self getApps];
+    
+    if (![[UserinfoManager sharedInstance] isLogin]) {
+        self.tabBarViewController = (UITabBarController *)self.window.rootViewController;
+        GuideViewController *guideVC = [[GuideViewController alloc] init];
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:guideVC];
+        self.window.rootViewController = nav;
+    }
     return YES;
 }
 

@@ -36,6 +36,10 @@
 		33E0E0A41AB6E833001C56B6 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E0E0A31AB6E833001C56B6 /* CFNetwork.framework */; };
 		33E0E0A61AB6E842001C56B6 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E0E0A51AB6E842001C56B6 /* libsqlite3.dylib */; };
 		33E0E0A81AB6E84F001C56B6 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E0E0A71AB6E84F001C56B6 /* StoreKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		4532B5DF1ABD6A9000992CCE /* UserinfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4532B5DE1ABD6A9000992CCE /* UserinfoManager.m */; };
+		4532B5E31ABD6CAE00992CCE /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4532B5E21ABD6CAE00992CCE /* GuideViewController.m */; };
+		4532B5E61ABD7C8500992CCE /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4532B5E51ABD7C8500992CCE /* LoginViewController.m */; };
+		4532B5E91ABD7CCE00992CCE /* ResignViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4532B5E81ABD7CCE00992CCE /* ResignViewController.m */; };
 		59D60AFE6E5104123C39395C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6CBA7BCBDEA9F01783223F9 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -113,6 +117,14 @@
 		33E0E0A31AB6E833001C56B6 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		33E0E0A51AB6E842001C56B6 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		33E0E0A71AB6E84F001C56B6 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		4532B5DD1ABD6A9000992CCE /* UserinfoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserinfoManager.h; sourceTree = "<group>"; };
+		4532B5DE1ABD6A9000992CCE /* UserinfoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserinfoManager.m; sourceTree = "<group>"; };
+		4532B5E11ABD6CAE00992CCE /* GuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideViewController.h; sourceTree = "<group>"; };
+		4532B5E21ABD6CAE00992CCE /* GuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideViewController.m; sourceTree = "<group>"; };
+		4532B5E41ABD7C8500992CCE /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		4532B5E51ABD7C8500992CCE /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		4532B5E71ABD7CCE00992CCE /* ResignViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResignViewController.h; sourceTree = "<group>"; };
+		4532B5E81ABD7CCE00992CCE /* ResignViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResignViewController.m; sourceTree = "<group>"; };
 		ACF9376D9E2C7ED920BEAFC1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D6CBA7BCBDEA9F01783223F9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E90DC9A46C43379DAC027A4E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -252,6 +264,7 @@
 		3382E4091AAD70AD00C91B88 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				4532B5E01ABD6C8A00992CCE /* Login */,
 				3382E3FF1AAD6C3A00C91B88 /* First */,
 				3382E4001AAD6C4700C91B88 /* Second */,
 				3382E4011AAD6C5000C91B88 /* Third */,
@@ -373,8 +386,23 @@
 			children = (
 				33E0E09C1AB6BF8F001C56B6 /* ShareData.h */,
 				33E0E09D1AB6BF8F001C56B6 /* ShareData.m */,
+				4532B5DD1ABD6A9000992CCE /* UserinfoManager.h */,
+				4532B5DE1ABD6A9000992CCE /* UserinfoManager.m */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		4532B5E01ABD6C8A00992CCE /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				4532B5E11ABD6CAE00992CCE /* GuideViewController.h */,
+				4532B5E21ABD6CAE00992CCE /* GuideViewController.m */,
+				4532B5E41ABD7C8500992CCE /* LoginViewController.h */,
+				4532B5E51ABD7C8500992CCE /* LoginViewController.m */,
+				4532B5E71ABD7CCE00992CCE /* ResignViewController.h */,
+				4532B5E81ABD7CCE00992CCE /* ResignViewController.m */,
+			);
+			name = Login;
 			sourceTree = "<group>";
 		};
 		5EA41D6217725730504160B4 /* Pods */ = {
@@ -541,17 +569,21 @@
 				33E0E08A1AB6B771001C56B6 /* BeeCache.m in Sources */,
 				33E0E0981AB6BA0C001C56B6 /* KZRequest.m in Sources */,
 				3382E4191AAE979200C91B88 /* GFWProgressView.m in Sources */,
+				4532B5E91ABD7CCE00992CCE /* ResignViewController.m in Sources */,
 				3382E40D1AAD71A800C91B88 /* MainThemeUtil.m in Sources */,
+				4532B5E31ABD6CAE00992CCE /* GuideViewController.m in Sources */,
 				33E0E09A1AB6BA0C001C56B6 /* KZResponseData.m in Sources */,
 				3382E3FB1AAD4FAD00C91B88 /* SecondViewController.m in Sources */,
 				33E0E08D1AB6B771001C56B6 /* NSDictionary+BeeExtension.m in Sources */,
 				3382E3FE1AAD4FB900C91B88 /* ThirdViewController.m in Sources */,
 				3382E3D31AAD476E00C91B88 /* AppDelegate.m in Sources */,
 				3382E4081AAD6EA600C91B88 /* GFWViewController.m in Sources */,
+				4532B5DF1ABD6A9000992CCE /* UserinfoManager.m in Sources */,
 				33E0E0991AB6BA0C001C56B6 /* KZRequestData.m in Sources */,
 				3382E4121AAD76F000C91B88 /* UIColor+Factory.m in Sources */,
 				3382E3F81AAD4FA100C91B88 /* FirstViewController.m in Sources */,
 				3382E3D01AAD476E00C91B88 /* main.m in Sources */,
+				4532B5E61ABD7C8500992CCE /* LoginViewController.m in Sources */,
 				3382E4051AAD6C9E00C91B88 /* GFWTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
