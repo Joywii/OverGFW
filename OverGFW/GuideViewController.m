@@ -26,16 +26,21 @@
         [self.navigationController setNavigationBarHidden:YES animated:NO];
     }
     
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight - 115)];
-    imageView.image = [UIImage imageNamed:@""];
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
+    imageView.image = [UIImage imageNamed:@"iPhone6p"];
+    [self.view addSubview:imageView];
     
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, kScreenHeight - 115 + 14, kScreenWidth, 18)];
+    UIView *whiteBackView = [[UIView alloc] initWithFrame:CGRectMake(0, kScreenHeight - 115, kScreenWidth, 115)];
+    whiteBackView.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:whiteBackView];
+    
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 14, kScreenWidth, 18)];
     titleLabel.textAlignment = NSTextAlignmentCenter;
     titleLabel.textColor = [UIColor blackColor];
     titleLabel.backgroundColor = [UIColor clearColor];
     titleLabel.font = [UIFont systemFontOfSize:16];
     titleLabel.text = @"科学上网，求得新知";
-    [self.view addSubview:titleLabel];
+    [whiteBackView addSubview:titleLabel];
     
     CGFloat flexWidth = (kScreenWidth - 260) / 3.0;
     CGFloat buttonY = kScreenHeight - 115 + 14 + 18 + 14;
