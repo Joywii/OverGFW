@@ -1,20 +1,21 @@
 //
-//  ResignViewController.m
+//  ForgetPWViewController.m
 //  OverGFW
 //
-//  Created by 仲 维涛 on 15/3/21.
+//  Created by 仲 维涛 on 15/4/11.
 //  Copyright (c) 2015年 joywii. All rights reserved.
 //
 
-#import "ResignViewController.h"
+#import "ForgetPWViewController.h"
 #import "LoginUtil.h"
 #import "MBProgressHUD+Window.h"
 
-@interface ResignViewController ()<UITextFieldDelegate>
+@interface ForgetPWViewController ()<UITextFieldDelegate>
 
 @property (nonatomic,strong) UITextField *phoneNumTF;
 @property (nonatomic,strong) UITextField *codeTF;
 @property (nonatomic,strong) UITextField *passwordTF;
+@property (nonatomic,strong) UITextField *onceMoreTF;
 
 @property (nonatomic,strong) NSTimer *timer;
 @property (nonatomic,assign) NSInteger seconds;
@@ -23,13 +24,13 @@
 
 @end
 
-@implementation ResignViewController
+@implementation ForgetPWViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithRed:237.0/255.0 green:237.0/255.0 blue:237.0/255.0 alpha:1.0];
     [self.navigationController setNavigationBarHidden:NO animated:NO];
-    self.title = @"注册";
+    self.title = @"忘记密码";
     
     UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [backButton setImage:[UIImage imageNamed:@"topbar-back-icon"] forState:UIControlStateNormal];
@@ -70,10 +71,9 @@
 - (void)backButtonClick:(id)sender
 {
     [self.navigationController popViewControllerAnimated:YES];
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 - (void)setupUI {
-    UIView *backView = [[UIView alloc] initWithFrame:CGRectMake(0, 15, kScreenWidth, 135)];
+    UIView *backView = [[UIView alloc] initWithFrame:CGRectMake(0, 15, kScreenWidth, 180)];
     backView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:backView];
     
@@ -84,6 +84,10 @@
     UIView *downSpeLineView = [[UIView alloc] initWithFrame:CGRectMake(0, 90, kScreenWidth, 1)];
     downSpeLineView.backgroundColor = [UIColor colorWithRed:235.0/255.0 green:235.0/255.0 blue:235.0/255.0 alpha:1.0];
     [backView addSubview:downSpeLineView];
+    
+    UIView *onceSpeLineView = [[UIView alloc] initWithFrame:CGRectMake(0, 135, kScreenWidth, 1)];
+    onceSpeLineView.backgroundColor = [UIColor colorWithRed:235.0/255.0 green:235.0/255.0 blue:235.0/255.0 alpha:1.0];
+    [backView addSubview:onceSpeLineView];
     
     self.phoneNumTF = [[UITextField alloc] initWithFrame:CGRectMake(15, 0, kScreenWidth - 30, 44)];
     self.phoneNumTF.textColor = [UIColor blackColor];
@@ -104,20 +108,30 @@
     [backView addSubview:self.codeTF];
     
     self.codeButton = [self buttonSendCode:CGRectMake(kScreenWidth - 85, 56, 70, 25)];
-    [backView addSubview:self.codeButton];
     [self.codeButton addTarget:self action:@selector(sendSms:) forControlEvents:UIControlEventTouchUpInside];
+    [backView addSubview:self.codeButton];
     
     self.passwordTF = [[UITextField alloc] initWithFrame:CGRectMake(15, 90, kScreenWidth - 30, 44)];
     self.passwordTF.textColor = [UIColor blackColor];
     self.passwordTF.font = [UIFont boldSystemFontOfSize:15];
-    self.passwordTF.placeholder = @"密码";
+    self.passwordTF.placeholder = @"设定新密码";
     self.passwordTF.delegate = self;
     self.passwordTF.keyboardType = UIKeyboardTypeDefault;
     self.passwordTF.clearButtonMode = UITextFieldViewModeWhileEditing;
     self.passwordTF.secureTextEntry = YES;
     [backView addSubview:self.passwordTF];
     
-    UILabel *passwordTipLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 160, kScreenWidth, 15)];
+    self.onceMoreTF = [[UITextField alloc] initWithFrame:CGRectMake(15, 135, kScreenWidth - 30, 44)];
+    self.onceMoreTF.textColor = [UIColor blackColor];
+    self.onceMoreTF.font = [UIFont boldSystemFontOfSize:15];
+    self.onceMoreTF.placeholder = @"再输一遍";
+    self.onceMoreTF.delegate = self;
+    self.onceMoreTF.keyboardType = UIKeyboardTypeDefault;
+    self.onceMoreTF.clearButtonMode = UITextFieldViewModeWhileEditing;
+    self.onceMoreTF.secureTextEntry = YES;
+    [backView addSubview:self.onceMoreTF];
+    
+    UILabel *passwordTipLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 205, kScreenWidth, 15)];
     passwordTipLabel.textColor = [UIColor colorWithRed:170.0/255.0 green:170.0/255.0 blue:170.0/255.0 alpha:1.0];
     passwordTipLabel.font = [UIFont systemFontOfSize:12];
     passwordTipLabel.backgroundColor = [UIColor clearColor];
@@ -125,10 +139,11 @@
     [self.view addSubview:passwordTipLabel];
     
     CGFloat flexWidth = (kScreenWidth - 130) / 2.0;
-    CGFloat buttonY = 210;
-    UIButton *resignButton = [self buttonFactoryTitle:@"注册"
+    CGFloat buttonY = 255;
+    UIButton *resignButton = [self buttonFactoryTitle:@"完成"
                                             withFrame:CGRectMake(flexWidth, buttonY, 130, 40)
                                       backgroundColor:[UIColor themeColor]];
+
     [resignButton addTarget:self action:@selector(resign:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:resignButton];
 }
@@ -162,7 +177,7 @@
     button.titleEdgeInsets = UIEdgeInsetsMake(1, 0, 0, 0);
     [button setTitle:@"发送验证码" forState:UIControlStateNormal];
     [button setTitleColor:[UIColor themeColor] forState:UIControlStateNormal];
-    button.titleLabel.font = [UIFont boldSystemFontOfSize:12];
+    button.titleLabel.font = [UIFont systemFontOfSize:12];
     return button;
 }
 - (void)sendSms:(id)sender
@@ -202,8 +217,6 @@
         [hud hide:YES afterDelay:1.0];
         return;
     }
-    
-    
 }
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
@@ -213,4 +226,6 @@
     }
     return YES;
 }
+
+
 @end

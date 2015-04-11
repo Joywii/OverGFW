@@ -40,6 +40,10 @@
 		4532B5E31ABD6CAE00992CCE /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4532B5E21ABD6CAE00992CCE /* GuideViewController.m */; };
 		4532B5E61ABD7C8500992CCE /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4532B5E51ABD7C8500992CCE /* LoginViewController.m */; };
 		4532B5E91ABD7CCE00992CCE /* ResignViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4532B5E81ABD7CCE00992CCE /* ResignViewController.m */; };
+		455C44AE1AD90F94001F7BB8 /* LoginUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 455C44AD1AD90F94001F7BB8 /* LoginUtil.m */; };
+		455C44B21AD91017001F7BB8 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 455C44B11AD91017001F7BB8 /* MBProgressHUD.m */; };
+		455C44B51AD9103C001F7BB8 /* MBProgressHUD+Window.m in Sources */ = {isa = PBXBuildFile; fileRef = 455C44B41AD9103C001F7BB8 /* MBProgressHUD+Window.m */; };
+		455C44B81AD91E15001F7BB8 /* ForgetPWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 455C44B71AD91E15001F7BB8 /* ForgetPWViewController.m */; };
 		59D60AFE6E5104123C39395C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6CBA7BCBDEA9F01783223F9 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -125,6 +129,14 @@
 		4532B5E51ABD7C8500992CCE /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		4532B5E71ABD7CCE00992CCE /* ResignViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResignViewController.h; sourceTree = "<group>"; };
 		4532B5E81ABD7CCE00992CCE /* ResignViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResignViewController.m; sourceTree = "<group>"; };
+		455C44AC1AD90F94001F7BB8 /* LoginUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginUtil.h; sourceTree = "<group>"; };
+		455C44AD1AD90F94001F7BB8 /* LoginUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginUtil.m; sourceTree = "<group>"; };
+		455C44B01AD91017001F7BB8 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		455C44B11AD91017001F7BB8 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		455C44B31AD9103C001F7BB8 /* MBProgressHUD+Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Window.h"; sourceTree = "<group>"; };
+		455C44B41AD9103C001F7BB8 /* MBProgressHUD+Window.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Window.m"; sourceTree = "<group>"; };
+		455C44B61AD91E15001F7BB8 /* ForgetPWViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPWViewController.h; sourceTree = "<group>"; };
+		455C44B71AD91E15001F7BB8 /* ForgetPWViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPWViewController.m; sourceTree = "<group>"; };
 		ACF9376D9E2C7ED920BEAFC1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D6CBA7BCBDEA9F01783223F9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E90DC9A46C43379DAC027A4E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -303,6 +315,7 @@
 		33E0E0631AB68217001C56B6 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				455C44AF1AD91017001F7BB8 /* MBProgressHUD */,
 				33E0E0641AB68225001C56B6 /* Youmi */,
 			);
 			name = Vendor;
@@ -395,14 +408,29 @@
 		4532B5E01ABD6C8A00992CCE /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				455C44AC1AD90F94001F7BB8 /* LoginUtil.h */,
+				455C44AD1AD90F94001F7BB8 /* LoginUtil.m */,
 				4532B5E11ABD6CAE00992CCE /* GuideViewController.h */,
 				4532B5E21ABD6CAE00992CCE /* GuideViewController.m */,
 				4532B5E41ABD7C8500992CCE /* LoginViewController.h */,
 				4532B5E51ABD7C8500992CCE /* LoginViewController.m */,
 				4532B5E71ABD7CCE00992CCE /* ResignViewController.h */,
 				4532B5E81ABD7CCE00992CCE /* ResignViewController.m */,
+				455C44B61AD91E15001F7BB8 /* ForgetPWViewController.h */,
+				455C44B71AD91E15001F7BB8 /* ForgetPWViewController.m */,
 			);
 			name = Login;
+			sourceTree = "<group>";
+		};
+		455C44AF1AD91017001F7BB8 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				455C44B31AD9103C001F7BB8 /* MBProgressHUD+Window.h */,
+				455C44B41AD9103C001F7BB8 /* MBProgressHUD+Window.m */,
+				455C44B01AD91017001F7BB8 /* MBProgressHUD.h */,
+				455C44B11AD91017001F7BB8 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 		5EA41D6217725730504160B4 /* Pods */ = {
@@ -571,18 +599,22 @@
 				3382E4191AAE979200C91B88 /* GFWProgressView.m in Sources */,
 				4532B5E91ABD7CCE00992CCE /* ResignViewController.m in Sources */,
 				3382E40D1AAD71A800C91B88 /* MainThemeUtil.m in Sources */,
+				455C44B51AD9103C001F7BB8 /* MBProgressHUD+Window.m in Sources */,
 				4532B5E31ABD6CAE00992CCE /* GuideViewController.m in Sources */,
 				33E0E09A1AB6BA0C001C56B6 /* KZResponseData.m in Sources */,
 				3382E3FB1AAD4FAD00C91B88 /* SecondViewController.m in Sources */,
+				455C44B81AD91E15001F7BB8 /* ForgetPWViewController.m in Sources */,
 				33E0E08D1AB6B771001C56B6 /* NSDictionary+BeeExtension.m in Sources */,
 				3382E3FE1AAD4FB900C91B88 /* ThirdViewController.m in Sources */,
 				3382E3D31AAD476E00C91B88 /* AppDelegate.m in Sources */,
 				3382E4081AAD6EA600C91B88 /* GFWViewController.m in Sources */,
 				4532B5DF1ABD6A9000992CCE /* UserinfoManager.m in Sources */,
+				455C44B21AD91017001F7BB8 /* MBProgressHUD.m in Sources */,
 				33E0E0991AB6BA0C001C56B6 /* KZRequestData.m in Sources */,
 				3382E4121AAD76F000C91B88 /* UIColor+Factory.m in Sources */,
 				3382E3F81AAD4FA100C91B88 /* FirstViewController.m in Sources */,
 				3382E3D01AAD476E00C91B88 /* main.m in Sources */,
+				455C44AE1AD90F94001F7BB8 /* LoginUtil.m in Sources */,
 				4532B5E61ABD7C8500992CCE /* LoginViewController.m in Sources */,
 				3382E4051AAD6C9E00C91B88 /* GFWTabBarController.m in Sources */,
 			);
