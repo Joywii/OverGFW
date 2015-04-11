@@ -13,13 +13,8 @@
 
 @interface LoginViewController ()<UITextFieldDelegate>
 
-<<<<<<< HEAD
 @property (nonatomic,strong) UITextField *phoneNumTF;
 @property (nonatomic,strong) UITextField *passwordTF;
-=======
-@property (nonatomic,strong) UITextField *phoneTextField;
-@property (nonatomic,strong) UILabel *phonePlaceLabel;
->>>>>>> 06375c756920aab15c7f88196b4ae89ee6343a50
 
 @end
 
